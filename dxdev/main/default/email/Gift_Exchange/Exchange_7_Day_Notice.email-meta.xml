@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email is sent one week before the exchange deadline as a reminder</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Gift_Exchange_Letterhead</letterhead>
+    <name>Exchange 7 Day Notice</name>
+    <style>freeForm</style>
+    <subject>Gift Exchange - 7 days to go!</subject>
+    <textOnly>Howdy {!Assignment__c.OwnerFullName},
+
+This is a friendly reminder that there are seven (swans-a-swimming) days to go!
+
+Please ship your gift soon if you haven&apos;t already. When you DO ship, please update your assignment record in the community so I can have accurate analytics.
+
+Fa la la la la,
+The Ghost of Platform Gift Exchanges Present</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

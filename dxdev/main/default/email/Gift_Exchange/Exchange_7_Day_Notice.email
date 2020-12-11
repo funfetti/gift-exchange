@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Season's greetings {!Assignment__c.OwnerFullName},<div><br></div><div>This is a friendly reminder that there are <b>seven (</b>swans-a-swimming) days to go!&nbsp;</div><div><br></div><div>Please ship your gift soon if you haven't already. When you DO ship, please update your assignment record in the <a href="{!Assignment__c.Link}">app</a>&nbsp;so I can have accurate analytics.</div><div><br></div><div>Fa la la la la,&nbsp;</div><div>The Ghost of Platform Gift Exchanges Present</div><div><br></div><div><br></div>]]></td>
+</tr>
+</table>

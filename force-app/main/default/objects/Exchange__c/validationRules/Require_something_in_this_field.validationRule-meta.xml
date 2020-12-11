@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_something_in_this_field</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK(Exchange_Admin__c)</errorConditionFormula>
+    <errorDisplayField>Exchange_Admin__c</errorDisplayField>
+    <errorMessage>You must specify an Exchange Admin.</errorMessage>
+</ValidationRule>

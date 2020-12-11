@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email is sent right after the matching algorithm is run. It contains a link to the assignment record</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Gift_Exchange_Letterhead</letterhead>
+    <name>Exchange Matching Notification</name>
+    <style>freeForm</style>
+    <subject>Gift Exchange - Your match is ready!</subject>
+    <textOnly>Dearest {!Assignment__c.OwnerFirstName},
+
+We&apos;ve just run Pete&apos;s super fancy matching algorithm and you have been assigned your giftee,
+
+{!Assignment__c.Recipient__c}
+
+Check the gift exchange community for more information. Happy (present) hunting!
+
+Love,
+Your Santa Overlord</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

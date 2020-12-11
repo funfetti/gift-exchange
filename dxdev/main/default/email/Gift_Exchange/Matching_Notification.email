@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div><div>Dearest {!Assignment__c.OwnerFirstName},</div><div><br></div>The elves have just run our super fancy matching algorithm and you have been assigned your giftee,&nbsp;<div><br></div><div><b>{!Assignment__c.Recipient__c}</b></div><div><div><br></div><div>Check the <a href="{!Assignment__c.Link}">gift exchange app</a> for more information. Happy (present) hunting!</div><div><br></div><div>Ho ho ho,&nbsp;</div><div>Your Santa Overlord</div></div></div>]]></td>
+</tr>
+</table>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This is a blank email with the Gift Exchange letterhead used in the email flow.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Gift_Exchange_Letterhead</letterhead>
+    <name>Free-form Gift Email</name>
+    <style>freeForm</style>
+    <subject>Gift Exchange - {!Exchange__c.00N1U00000TLSpo}</subject>
+    <textOnly>lorem</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

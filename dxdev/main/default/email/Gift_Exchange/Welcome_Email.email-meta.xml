@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>(Depreciated) Welcome Email for Gift Exchange Community</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Gift_Exchange_Letterhead</letterhead>
+    <name>z Depreciated - Community Welcome Email</name>
+    <style>freeForm</style>
+    <subject>Welcome to Gift Exchange!</subject>
+    <textOnly>Hi {!Receiving_User.FirstName},
+
+Welcome to {!Community_Name}! To get started, go to {!Community_Url}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

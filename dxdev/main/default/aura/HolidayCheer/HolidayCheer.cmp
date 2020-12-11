@@ -1,0 +1,4 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global">
+    <canvas style="height:100%; width:100%;" class="snow"></canvas>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+</aura:component>

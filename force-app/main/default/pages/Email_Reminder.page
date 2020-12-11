@@ -1,0 +1,7 @@
+<apex:page standardController="Exchange__c" extensions="EmailReminder" lightningStylesheets="true">
+    <apex:form >
+        <!-- <apex:inputHidden value="{!exchange__c.Id}"/> --> 
+
+        <apex:commandButton value="Send Email" action="{!sendEmail}"/> 
+    </apex:form>
+</apex:page>

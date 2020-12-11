@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Exchange__c.Gift_Signups__r$Name</field>
+    </columns>
+    <columns>
+        <field>Exchange__c.Gift_Signups__r$Owner</field>
+    </columns>
+    <columns>
+        <field>Exchange__c.Gift_Signups__r$Ship_To_Address__c</field>
+    </columns>
+    <columns>
+        <field>Exchange__c.Gift_Signups__r$Hobbies__c</field>
+    </columns>
+    <columns>
+        <field>Exchange__c.Gift_Signups__r$Wishlist__c</field>
+    </columns>
+    <description>Signups with Ship To, or Hobbies/Wishlist information missing</description>
+    <filter>
+        <booleanFilter>1 OR (2 AND 3)</booleanFilter>
+        <criteriaItems>
+            <column>Exchange__c.Gift_Signups__r$Ship_To_Address__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value/>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Exchange__c.Gift_Signups__r$Wishlist__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value/>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Exchange__c.Gift_Signups__r$Hobbies__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value/>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Exchange__c$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Signups with Missing Information</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Exchanges_with_Signups_and_Assignments__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Exchange__c.Gift_Signups__r$Ship_To_Address__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Exchange__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>
