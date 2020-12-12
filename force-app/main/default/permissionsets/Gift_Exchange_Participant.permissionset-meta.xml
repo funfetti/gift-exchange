@@ -5,18 +5,13 @@
         <visible>true</visible>
     </applicationVisibilities>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Assignment__c.Assignment_Shipped__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Assignment__c.Date_Shipped__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Assignment__c.Gift_Status__c</field>
+        <field>Assignment__c.Gift_Status_del__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -30,6 +25,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Assignment__c.Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Assignment__c.Tracking_Number__c</field>
         <readable>true</readable>
@@ -38,21 +38,6 @@
         <editable>true</editable>
         <field>Assignment__c.Unmask_Yourself_to_Giftee__c</field>
         <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Exchange__c.Active__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Exchange__c.Email_Template_Name__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Exchange__c.Error_Message__c</field>
-        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -102,12 +87,12 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Gift_Signup__c.Status__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Gift_Signup__c.Tracking_Number__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>

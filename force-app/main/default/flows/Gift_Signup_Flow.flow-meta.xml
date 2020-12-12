@@ -20,8 +20,8 @@
     <assignments>
         <name>assign_fields_to_signup</name>
         <label>assign fields to signup</label>
-        <locationX>180</locationX>
-        <locationY>618</locationY>
+        <locationX>182</locationX>
+        <locationY>617</locationY>
         <assignmentItems>
             <assignToReference>Signup.Hobbies__c</assignToReference>
             <operator>Assign</operator>
@@ -30,7 +30,7 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>ExistingSignup.Wishlist__c</assignToReference>
+            <assignToReference>Signup.Wishlist__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>WishlistInput</elementReference>
@@ -167,12 +167,18 @@
             <stringValue>LightningFlowBuilder</stringValue>
         </value>
     </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
     <processType>Flow</processType>
     <recordCreates>
         <name>actually_create_the_record</name>
         <label>actually create the signup record</label>
-        <locationX>400</locationX>
-        <locationY>671</locationY>
+        <locationX>408</locationX>
+        <locationY>622</locationY>
         <connector>
             <targetReference>Finish</targetReference>
         </connector>
@@ -217,7 +223,7 @@
             <dataType>String</dataType>
             <fieldText>Exchange</fieldText>
             <fieldType>DropdownBox</fieldType>
-            <isRequired>false</isRequired>
+            <isRequired>true</isRequired>
         </fields>
         <fields>
             <name>Address</name>
@@ -231,8 +237,8 @@
     <screens>
         <name>Finish</name>
         <label>Finish</label>
-        <locationX>398</locationX>
-        <locationY>774</locationY>
+        <locationX>644</locationX>
+        <locationY>627</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -310,8 +316,14 @@ Your exchange sign ups:</fieldText>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
-    <startElementReference>GiftExLookup</startElementReference>
-    <status>Active</status>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>GiftExLookup</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
     <textTemplates>
         <name>URLtexttemplate</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>

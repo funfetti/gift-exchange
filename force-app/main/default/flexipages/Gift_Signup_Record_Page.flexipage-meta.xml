@@ -7,7 +7,28 @@
                     <name>collapsed</name>
                     <value>true</value>
                 </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>enableActionsConfiguration</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>hideChatterActions</name>
+                    <value>false</value>
+                </componentInstanceProperties>
                 <componentName>force:highlightsPanel</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>lookupFieldName</name>
+                    <value>Gift_Signup__c.Exchange__c</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>updateQuickActionName</name>
+                    <value>Exchange__c.Update_Exchange</value>
+                </componentInstanceProperties>
+                <componentName>console:relatedRecord</componentName>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -54,19 +75,6 @@
                     <value>maintabs</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tabset</componentName>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>lookupFieldName</name>
-                    <value>Exchange__c</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>updateQuickActionName</name>
-                    <value>Exchange__c.Update_Exchange</value>
-                </componentInstanceProperties>
-                <componentName>console:relatedRecord</componentName>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

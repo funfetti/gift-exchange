@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <assignments>
+        <name>signup_status_to_free_agent</name>
+        <label>signup status to free agent</label>
+        <locationX>355</locationX>
+        <locationY>508</locationY>
+        <assignmentItems>
+            <assignToReference>get_related_gift_signup.Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Free Agent</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>update_related_gift_signup_with_new_status</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>when record is created - change the status of the linked gift signup to assigned</description>
+        <name>signup_status_to_matched</name>
+        <label>signup status to matched</label>
+        <locationX>50</locationX>
+        <locationY>505</locationY>
+        <assignmentItems>
+            <assignToReference>get_related_gift_signup.Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Assigned</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>update_related_gift_signup_with_new_status</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>signup_status_to_shipped</name>
+        <label>signup status to shipped</label>
+        <locationX>203</locationX>
+        <locationY>507</locationY>
+        <assignmentItems>
+            <assignToReference>get_related_gift_signup.Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Shipped!</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>get_related_gift_signup.Tracking_Number__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Tracking_Number__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>update_related_gift_signup_with_new_status</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Assignment_Status</name>
+        <label>Assignment Status</label>
+        <locationX>190</locationX>
+        <locationY>338</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>status_shipped</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Gift Shipped</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>signup_status_to_shipped</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>status = shipped</label>
+        </rules>
+        <rules>
+            <name>status_dropped</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Dropped</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>signup_status_to_free_agent</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>status = dropped</label>
+        </rules>
+        <rules>
+            <name>status_assigned</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Assigned</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>signup_status_to_matched</targetReference>
+            </connector>
+            <label>status = assigned</label>
+        </rules>
+    </decisions>
+    <interviewLabel>Assignment Notifications {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Gift Assignment Notifications</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>get_related_gift_signup</name>
+        <label>get related gift signup</label>
+        <locationX>261</locationX>
+        <locationY>164</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assignment_Status</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Recipient__r.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Gift_Signup__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>update_related_gift_signup_with_new_status</name>
+        <label>update related gift signup with new status</label>
+        <locationX>203</locationX>
+        <locationY>752</locationY>
+        <inputReference>get_related_gift_signup</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>391</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>get_related_gift_signup</targetReference>
+        </connector>
+        <object>Assignment__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
