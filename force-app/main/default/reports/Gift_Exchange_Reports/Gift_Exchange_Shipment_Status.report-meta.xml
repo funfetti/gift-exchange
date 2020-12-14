@@ -47,12 +47,12 @@
         <field>Exchange__c.Gift_Signups__r$Status__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Gift Shipment Status</name>
+    <name>Gift Exchange Shipment Status</name>
     <params>
         <name>co</name>
         <value>1</value>
     </params>
-    <reportType>Exchanges_with_Signups_and_Assignments__c</reportType>
+    <reportType>Gift_Exchanges_with_Signups_and_Assignments__c</reportType>
     <scope>user</scope>
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>

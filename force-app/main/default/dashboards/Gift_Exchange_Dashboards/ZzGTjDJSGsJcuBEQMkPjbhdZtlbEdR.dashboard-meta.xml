@@ -26,11 +26,17 @@
                 <enableHover>false</enableHover>
                 <expandOthers>false</expandOthers>
                 <groupingColumn>Exchange__c.Gift_Signups__r$Status__c</groupingColumn>
-                <groupingSortProperties/>
+                <groupingSortProperties>
+                    <groupingSorts>
+                        <groupingLevel>g1</groupingLevel>
+                        <sortColumn>RowCount</sortColumn>
+                        <sortOrder>d</sortOrder>
+                    </groupingSorts>
+                </groupingSortProperties>
                 <header>Gift Shipment Status</header>
                 <legendPosition>Right</legendPosition>
                 <maxValuesDisplayed>6</maxValuesDisplayed>
-                <report>Gift_Exchange_Reports/Gift_Shipment_Status_K4m</report>
+                <report>Gift_Exchange_Reports/Gift_Exchange_Shipment_Status</report>
                 <showPercentage>false</showPercentage>
                 <showTotal>true</showTotal>
                 <showValues>true</showValues>
@@ -86,7 +92,7 @@
                 </flexComponentProperties>
                 <groupingSortProperties/>
                 <header>Signups with Missing Information</header>
-                <report>Gift_Exchange_Reports/Signups_with_Missing_Information_dnU</report>
+                <report>Gift_Exchange_Reports/Gift_Signups_with_Missing_Information</report>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
             <rowSpan>8</rowSpan>
@@ -97,7 +103,7 @@
     <dashboardType>MyTeamUser</dashboardType>
     <description>Reports that help manage your exchanges</description>
     <isGridLayout>true</isGridLayout>
-    <runningUser>mbhasin@santaforce.net</runningUser>
+    <runningUser>test-ubjhaj3lc5lt@example.com</runningUser>
     <textColor>#000000</textColor>
     <title>Gift Exchange Admin Dashboard</title>
     <titleColor>#000000</titleColor>

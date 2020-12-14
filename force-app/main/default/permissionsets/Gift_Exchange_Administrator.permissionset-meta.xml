@@ -16,11 +16,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Assignment__c.Gift_Status_del__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Assignment__c.Giftee__c</field>
         <readable>true</readable>
     </fieldPermissions>

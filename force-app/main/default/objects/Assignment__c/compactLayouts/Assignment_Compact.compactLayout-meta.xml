@@ -3,7 +3,7 @@
     <fullName>Assignment_Compact</fullName>
     <fields>Exchange__c</fields>
     <fields>Giftee__c</fields>
-    <fields>Gift_Status__c</fields>
+    <fields>Status__c</fields>
     <fields>Tracking_Number__c</fields>
     <fields>Unmask_Yourself_to_Giftee__c</fields>
     <fields>OwnerId</fields>

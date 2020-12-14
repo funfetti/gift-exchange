@@ -12,7 +12,7 @@
         <outerJoin>false</outerJoin>
         <relationship>Gift_Signups__r</relationship>
     </join>
-    <label>Exchanges with Signups and Assignments</label>
+    <label>Gift Exchanges with Signups and Assignments</label>
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
@@ -213,11 +213,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Giftee__c</field>
-            <table>Exchange__c.Gift_Signups__r.Assignments__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Gift_Status__c</field>
             <table>Exchange__c.Gift_Signups__r.Assignments__r</table>
         </columns>
         <columns>
